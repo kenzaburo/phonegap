@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>English Collocation Dictionary</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/ratchet.css">
+    <link rel="stylesheet" type="text/css" href="css/oxford.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/react.min.js"></script>
+    <script type="text/javascript" src="js/ratchet.js"></script>
+
+  </head>
+  <style type="text/css">
+  #load{
+        width:100%;
+        height:100%;
+        position:fixed;
+        z-index:9999;
+        background:url("./loading.gif") no-repeat center center rgba(0,0,0,0.25)
+    }
+  </style>
+  <body>
+    <div id="load"></div>
+  </body>
+  <script type="text/javascript">
+      document.onreadystatechange = function () {
+      var state = document.readyState
+      if (state == 'interactive') {
+           document.getElementById('contents').style.visibility="hidden";
+      } else if (state == 'complete') {
+        document.getElementById('load').style.visibility="hidden";
+      }
+    }
+  </script>
+  <script type="text/javascript" src="./dict.json"></script>
+  <script type="text/javascript" src="js/bundle.js"></script>
+</html>
